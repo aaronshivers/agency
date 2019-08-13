@@ -1,11 +1,25 @@
 import React from 'react'
-import { Container } from 'react-bootstrap'
+import Navigation from './Navigation'
+import Header from './Header'
+import Services from './Services'
+import PortfolioGrid from './PortfolioGrid'
+import About from './About'
+import Team from './Team'
+import Clients from './Clients'
+import Contact from './Contact'
+import Footer from './Footer'
 
 const App = () => (
-  <div>
-    <Container>
-      <h1 className="display-1 text-center">agency</h1>
-    </Container>
+  <div id="page-top">
+    <Navigation />
+    <Header />
+    <Services />
+    <PortfolioGrid />
+    <About />
+    <Team />
+    <Clients />
+    <Contact />
+    <Footer />
   </div>
 )
 
