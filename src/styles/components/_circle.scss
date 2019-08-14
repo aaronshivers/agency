@@ -23,13 +23,16 @@
 }
 
 .fa-stack-2x {
+  font-size: 2em;
   left: 0;
   position: absolute;
   text-align: center;
   width: 100%;
+  z-index: -1;
 
   .fa-stack-1x {
     @extend .fa-stack-1x;
     line-height: inherit;
+    z-index: 0;
   }
 }

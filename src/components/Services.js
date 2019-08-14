@@ -18,7 +18,7 @@ const Header = () => (
               className="text-primary fas fa-stack-2x"
             />
             <FaShoppingCart
-              className="fas fa-stack-1x"
+              className="fas fa-stack-1x text-white"
             />
           </span>
           <h4 className="service-heading">E-Commerce</h4>
@@ -30,7 +30,7 @@ const Header = () => (
               className="text-primary fas fa-stack-2x"
             />
             <FaLaptop
-              className="fas fa-stack-1x"
+              className="fas fa-stack-1x text-white"
             />
           </span>
           <h4 className="service-heading">Responsive Design</h4>
@@ -42,7 +42,7 @@ const Header = () => (
               className="text-primary fas fa-stack-2x"
             />
             <FaLock
-              className="fas fa-stack-1x"
+              className="fas fa-stack-1x text-white"
             />
           </span>
           <h4 className="service-heading">Web Security</h4>
