@@ -2,9 +2,9 @@ import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import SectionHeader from './SectionHeader'
 import TeamMember from './TeamMember'
-import img1 from '../assets/images/about/1.jpg'
-import img2 from '../assets/images/about/2.jpg'
-import img3 from '../assets/images/about/3.jpg'
+import img1 from '../assets/images/team/1.jpg'
+import img2 from '../assets/images/team/2.jpg'
+import img3 from '../assets/images/team/3.jpg'
 
 const memberData = [
   {
