@@ -1,20 +1,55 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Container, Row, Col, Modal, Button } from 'react-bootstrap'
-import { FaPlus, FaTimes } from 'react-icons/fa'
-import thumb1 from '../assets/images/portfolio/01-thumbnail.jpg'
+import { FaPlus } from 'react-icons/fa'
+import PortfolioGridItem from './PortfolioGridItem'
 import full1 from '../assets/images/portfolio/01-full.jpg'
+import full2 from '../assets/images/portfolio/02-full.jpg'
+import full3 from '../assets/images/portfolio/03-full.jpg'
+import full4 from '../assets/images/portfolio/04-full.jpg'
+import full5 from '../assets/images/portfolio/05-full.jpg'
+import full6 from '../assets/images/portfolio/06-full.jpg'
+import thumb1 from '../assets/images/portfolio/01-thumbnail.jpg'
 import thumb2 from '../assets/images/portfolio/02-thumbnail.jpg'
 import thumb3 from '../assets/images/portfolio/03-thumbnail.jpg'
 import thumb4 from '../assets/images/portfolio/04-thumbnail.jpg'
 import thumb5 from '../assets/images/portfolio/05-thumbnail.jpg'
 import thumb6 from '../assets/images/portfolio/06-thumbnail.jpg'
 
-const PortfolioGrid = () => {
-  const [ show, setShow ] = useState(false)
-  const handleClose = () => setShow(false)
-  const handleShow = () => setShow(true)
-  useEffect(() => console.log(show), [show])
+const gridData = [
+  {
+    image: full1,
+    thumbnail: thumb1,
+    title: 'threads',
+    subtitle: 'illustration'
+  }, {
+    image: full2,
+    thumbnail: thumb2,
+    title: 'explore',
+    subtitle: 'graphic design'
+  }, {
+    image: full3,
+    thumbnail: thumb3,
+    title: 'finish',
+    subtitle: 'identity'
+  }, {
+    image: full4,
+    thumbnail: thumb4,
+    title: 'lines',
+    subtitle: 'branding'
+  }, {
+    image: full5,
+    thumbnail: thumb5,
+    title: 'southwest',
+    subtitle: 'website design'
+  }, {
+    image: full6,
+    thumbnail: thumb6,
+    title: 'window',
+    subtitle: 'photograpy'
+  }
+]
 
+const PortfolioGrid = () => {
   return (
     <>
       <section className="bg-light page-section" id="portfolio">
@@ -26,135 +61,14 @@ const PortfolioGrid = () => {
             </Col>
           </Row>
           <Row>
-            <Col
-              md={ 4 }
-              sm={ 6 }
-              className="portfolio-item"
-              onClick={ handleShow }
-            >
-              <a className="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-                <div className="portfolio-hover">
-                  <div className="portfolio-hover-content">
-                    <FaPlus />
-                  </div>
-                </div>
-                <img className="img-fluid" src={ thumb1 } alt="" />
-              </a>
-              <div className="portfolio-caption">
-                <h4>Threads</h4>
-                <p className="text-muted">Illustration</p>
-              </div>
-            </Col>
-            <Col md={ 4 } sm={ 6 } className="portfolio-item">
-              <a className="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-                <div className="portfolio-hover">
-                  <div className="portfolio-hover-content">
-                    <FaPlus />
-                  </div>
-                </div>
-                <img className="img-fluid" src={ thumb2 } alt="" />
-              </a>
-              <div className="portfolio-caption">
-                <h4>Explore</h4>
-                <p className="text-muted">Graphic Design</p>
-              </div>
-            </Col>
-            <Col md={ 4 } sm={ 6 } className="portfolio-item">
-              <a className="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-                <div className="portfolio-hover">
-                  <div className="portfolio-hover-content">
-                    <FaPlus />
-                  </div>
-                </div>
-                <img className="img-fluid" src={ thumb3 } alt="" />
-              </a>
-              <div className="portfolio-caption">
-                <h4>Finish</h4>
-                <p className="text-muted">Identity</p>
-              </div>
-            </Col>
-            <Col md={ 4 } sm={ 6 } className="portfolio-item">
-              <a className="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-                <div className="portfolio-hover">
-                  <div className="portfolio-hover-content">
-                    <FaPlus />
-                  </div>
-                </div>
-                <img className="img-fluid" src={ thumb4 } alt="" />
-              </a>
-              <div className="portfolio-caption">
-                <h4>Lines</h4>
-                <p className="text-muted">Branding</p>
-              </div>
-            </Col>
-            <Col md={ 4 } sm={ 6 } className="portfolio-item">
-              <a className="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-                <div className="portfolio-hover">
-                  <div className="portfolio-hover-content">
-                    <FaPlus />
-                  </div>
-                </div>
-                <img className="img-fluid" src={ thumb5 } alt="" />
-              </a>
-              <div className="portfolio-caption">
-                <h4>Southwest</h4>
-                <p className="text-muted">Website Design</p>
-              </div>
-            </Col>
-            <Col md={ 4 } sm={ 6 } className="portfolio-item">
-              <a className="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-                <div className="portfolio-hover">
-                  <div className="portfolio-hover-content">
-                    <FaPlus />
-                  </div>
-                </div>
-                <img className="img-fluid" src={ thumb6 } alt="" />
-              </a>
-              <div className="portfolio-caption">
-                <h4>Window</h4>
-                <p className="text-muted">Photography</p>
-              </div>
-            </Col>
+            {
+              gridData.map((item, i) => (
+                <PortfolioGridItem key={ i } index={ i } { ...item } />
+              ))
+            }
           </Row>
         </Container>
       </section>
-
-      <Modal 
-        show={ show }
-        animation
-        className="portfolio-modal"
-        id="portfolioModal1"
-        tabIndex="-1"
-      >
-        <div className="modal-dialog">
-          <div className="modal-content">
-            <div className="close-modal" onClick={ handleClose }>
-              <div className="lr">
-                <div className="rl"></div>
-              </div>
-            </div>
-            <Container>
-              <Row>
-                <Col lg={ 8 } className="mx-auto">
-                  <Modal.Body>
-                    <h2 className="text-uppercase">Project Name</h2>
-                    <p className="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                    <img className="img-fluid d-block mx-auto" src={ full1 } alt="" />
-                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                    <ul className="list-inline">
-                      <li>Date: January 2017</li>
-                      <li>Client: Threads</li>
-                      <li>Category: Illustration</li>
-                    </ul>
-                    <Button variant="primary" onClick={ handleClose }>
-                      <FaTimes /> Close Project</Button>
-                  </Modal.Body>
-                </Col>
-              </Row>
-            </Container>
-          </div>
-        </div>
-      </Modal>
     </>
   )
 }

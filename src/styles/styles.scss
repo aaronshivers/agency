@@ -8,9 +8,11 @@
 @import "base/variables.scss";
 @import "base/mixins.scss";
 
+// Bootstrap
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
 // Global CSS
 @import "base/page.scss";
-@import '../../node_modules/bootstrap/scss/bootstrap';
 
 // Components
 @import "components/buttons.scss";
