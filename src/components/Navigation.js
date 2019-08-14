@@ -6,17 +6,17 @@ const Navigation = () => (
   <Navbar
     expand="lg"
     variant="dark"
-    bg="dark"
+    bg="black"
     fixed="top"
     id="mainNav"
     collapseOnSelect
   >
     <Container>
       <Navbar.Brand href="#page-top">
-        Start Bootstrap
+        Web Agency
       </Navbar.Brand>
       <Navbar.Toggle as={ Button }>
-        Menu <FaBars />
+        <span>Menu</span> <FaBars className="pb-1" />
       </Navbar.Toggle>
       <Navbar.Collapse>
         <Nav className="text-uppercase ml-auto">
