@@ -7,7 +7,6 @@ const PortfolioGridItem = ({ image, thumbnail, title, subtitle, index }) => {
   const [ show, setShow ] = useState(false)
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
-  useEffect(() => console.log(show), [show])
 
   return (
     <>
