@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
+import { FaCircle, FaLock, FaShoppingCart, FaLaptop } from 'react-icons/fa'
 
 const Header = () => (
   <section className="page-section" id="services">
@@ -12,25 +13,37 @@ const Header = () => (
       </Row>
       <Row className="text-center">
         <Col md={ 4 }>
-          <span className="fa-stack fa-4x">
-            <i className="fas fa-circle fa-stack-2x text-primary"></i>
-            <i className="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+          <span className="fa-4x fa-stack">
+            <FaCircle
+              className="text-primary fas fa-stack-2x"
+            />
+            <FaShoppingCart
+              className="fas fa-stack-1x"
+            />
           </span>
           <h4 className="service-heading">E-Commerce</h4>
           <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
         </Col>
         <Col md={ 4 }>
-          <span className="fa-stack fa-4x">
-            <i className="fas fa-circle fa-stack-2x text-primary"></i>
-            <i className="fas fa-laptop fa-stack-1x fa-inverse"></i>
+          <span className="fa-4x fa-stack">
+            <FaCircle
+              className="text-primary fas fa-stack-2x"
+            />
+            <FaLaptop
+              className="fas fa-stack-1x"
+            />
           </span>
           <h4 className="service-heading">Responsive Design</h4>
           <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
         </Col>
         <Col md={ 4 }>
-          <span className="fa-stack fa-4x">
-            <i className="fas fa-circle fa-stack-2x text-primary"></i>
-            <i className="fas fa-lock fa-stack-1x fa-inverse"></i>
+          <span className="fa-4x fa-stack">
+            <FaCircle
+              className="text-primary fas fa-stack-2x"
+            />
+            <FaLock
+              className="fas fa-stack-1x"
+            />
           </span>
           <h4 className="service-heading">Web Security</h4>
           <p className="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>

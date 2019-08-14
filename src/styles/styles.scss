@@ -1,3 +1,9 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700');
+
 // Core variables and mixins
 @import "base/variables.scss";
 @import "base/mixins.scss";
@@ -9,6 +15,7 @@
 // Components
 @import "components/buttons.scss";
 @import "components/navbar.scss";
+@import "components/circle.scss";
 
 // Layout
 @import "layout/masthead.scss";
@@ -18,8 +25,3 @@
 @import "layout/team.scss";
 @import "layout/contact.scss";
 @import "layout/footer.scss";
-
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
-@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
-@import url('https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700');
