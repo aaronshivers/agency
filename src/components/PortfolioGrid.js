@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Row, Col, Modal, Button } from 'react-bootstrap'
 import { FaPlus } from 'react-icons/fa'
+import SectionHeader from './SectionHeader'
 import PortfolioGridItem from './PortfolioGridItem'
 import full1 from '../assets/images/portfolio/01-full.jpg'
 import full2 from '../assets/images/portfolio/02-full.jpg'
@@ -54,12 +55,10 @@ const PortfolioGrid = () => {
     <>
       <section className="bg-light page-section" id="portfolio">
         <Container>
-          <Row className="row">
-            <Col lg={ 12 } className="text-center">
-              <h2 className="section-heading text-uppercase">Portfolio</h2>
-              <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-            </Col>
-          </Row>
+          <SectionHeader
+            title='Portfolio'
+            subtitle='Lorem ipsum dolor sit amet consectetur.'
+          />
           <Row>
             {
               gridData.map((item, i) => (

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
+import SectionHeader from './SectionHeader'
 import TeamMember from './TeamMember'
 import img1 from '../assets/images/about/1.jpg'
 import img2 from '../assets/images/about/2.jpg'
@@ -24,12 +25,10 @@ const memberData = [
 const Team = () => (
   <section className="bg-light page-section" id="team">
     <Container className="container">
-      <Row>
-        <Col lg={ 12 } className="text-center">
-          <h2 className="section-heading text-uppercase">Our Amazing Team</h2>
-          <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-        </Col>
-      </Row>
+      <SectionHeader
+        title='Team'
+        subtitle='Lorem ipsum dolor sit amet consectetur.'
+      />
       <Row>
         {
           memberData.map((member, i) => (

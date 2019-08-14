@@ -1,5 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
+import SectionHeader from './SectionHeader'
 import img1 from '../assets/images/about/1.jpg'
 import img2 from '../assets/images/about/2.jpg'
 import img3 from '../assets/images/about/3.jpg'
@@ -8,12 +9,10 @@ import img4 from '../assets/images/about/4.jpg'
 const About = () => (
   <section className="page-section" id="about">
     <Container>
-      <Row className="row">
-        <Col lg={ 12 } className="text-center">
-          <h2 className="section-heading text-uppercase">About</h2>
-          <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-        </Col>
-      </Row>
+      <SectionHeader
+        title='About'
+        subtitle='Lorem ipsum dolor sit amet consectetur.'
+      />
       <Row className="row">
         <Col lg={ 12 }>
           <ul className="timeline">

@@ -1,16 +1,15 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { FaCircle, FaLock, FaShoppingCart, FaLaptop } from 'react-icons/fa'
+import SectionHeader from './SectionHeader'
 
 const Header = () => (
   <section className="page-section" id="services">
     <Container>
-      <Row>
-        <Col lg={ 12 } className="text-center">
-          <h2 className="section-heading text-uppercase">Services</h2>
-          <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-        </Col>
-      </Row>
+      <SectionHeader
+        title='Services'
+        subtitle='Lorem ipsum dolor sit amet consectetur.'
+      />
       <Row className="text-center">
         <Col md={ 4 }>
           <span className="fa-4x fa-stack">

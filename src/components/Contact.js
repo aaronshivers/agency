@@ -1,15 +1,14 @@
 import React from 'react'
-// import { Container } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
+import SectionHeader from './SectionHeader'
 
 const Contact = () => (
   <section className="page-section" id="contact">
     <div className="container">
-      <div className="row">
-        <div className="col-lg-12 text-center">
-          <h2 className="section-heading text-uppercase">Contact Us</h2>
-          <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-        </div>
-      </div>
+      <SectionHeader
+        title='Contact Us'
+        subtitle='Lorem ipsum dolor sit amet consectetur.'
+      />
       <div className="row">
         <div className="col-lg-12">
           <form id="contactForm" name="sentMessage" noValidate="novalidate">
